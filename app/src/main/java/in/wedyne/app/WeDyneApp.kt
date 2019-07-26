@@ -7,6 +7,6 @@ class WeDyneApp : MultiDexApplication() {
     override fun onCreate() {
         super.onCreate()
 
-        Thread.sleep(3000)
+        Thread.sleep(1000)
     }
 }
