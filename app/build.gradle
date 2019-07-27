@@ -25,6 +25,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
 }
 
 kapt {
@@ -44,7 +48,7 @@ dependencies {
     //Material Design
     implementation 'com.google.android.material:material:' + versions.materialDesign
 
-    //kotlin
+    //Kotlin
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:' + versions.kotlin
 
     //Glide
@@ -55,8 +59,12 @@ dependencies {
     implementation 'com.airbnb.android:epoxy:' + versions.epoxy
     kapt 'com.airbnb.android:epoxy-processor:' + versions.epoxy
 
+    //AndroidX
     implementation 'androidx.appcompat:appcompat:' + versions.androidx
     implementation 'androidx.core:core-ktx:' + versions.androidx
+
+    //PageIndicator
+    implementation 'me.relex:circleindicator:2.1.2'
 
     implementation 'androidx.constraintlayout:constraintlayout:' + versions.constraintLayout
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'

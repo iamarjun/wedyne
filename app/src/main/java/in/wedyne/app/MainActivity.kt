@@ -7,7 +7,6 @@ import android.view.WindowManager
 import android.os.Build
 
 
-
 class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

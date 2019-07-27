@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.fragment_login.view.*
 
 class LoginFragment : Fragment() {
 
-    private val adapter: ViewPagerAdapter by lazy {
+    private val viewPagerAdapter: ViewPagerAdapter by lazy {
         ViewPagerAdapter()
     }
 
@@ -31,10 +31,7 @@ class LoginFragment : Fragment() {
 
         // Inflate the layout for this fragment
 
-        view_pager?.apply {
-            offscreenPageLimit = 3
-        }
-        adapter.setOnBoardingScreens(onBoardingScreens)
+        viewPagerAdapter.setOnBoardingScreens(onBoardingScreens)
 
         return inflater.inflate(R.layout.fragment_login, container, false)
     }
@@ -42,8 +39,14 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.view_pager.adapter = adapter
-        view.view_pager.orientation = ORIENTATION_HORIZONTAL
+        view.view_pager?.apply {
+            adapter = viewPagerAdapter
+            orientation = ORIENTATION_HORIZONTAL
+            offscreenPageLimit = 3
+        }
+
+        view.indicator.setViewPager(view.view_pager)
+        viewPagerAdapter.registerAdapterDataObserver(view.indicator.adapterDataObserver)
 
     }
 
