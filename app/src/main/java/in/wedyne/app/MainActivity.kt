@@ -1,10 +1,10 @@
 package `in`.wedyne.app
 
-import `in`.wedyne.app.login.LoginFragment
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.view.WindowManager
+import android.app.Activity
+import android.graphics.Color
 import android.os.Build
+import android.os.Bundle
+import android.view.View
 
 
 class MainActivity : BaseActivity() {
@@ -13,8 +13,7 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        supportFragmentManager.beginTransaction()
-            .add(R.id.container, LoginFragment())
-            .commit()
     }
+
+
 }
