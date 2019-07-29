@@ -19,6 +19,14 @@
         android:id="@+id/signUpFragment"
         android:name="in.wedyne.app.login.SignUpFragment"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" />
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_otpFragment"
+            app:destination="@id/otpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otpFragment"
+        android:name="in.wedyne.app.login.OtpFragment"
+        android:label="OtpFragment" />
 
 </navigation>

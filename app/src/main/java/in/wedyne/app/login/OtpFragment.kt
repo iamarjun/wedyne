@@ -8,12 +8,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.fragment_sign_up.view.*
+import kotlinx.android.synthetic.main.fragment_otp.view.*
+
 
 /**
  * A simple [Fragment] subclass.
  */
-class SignUpFragment : BaseFragment() {
+class OtpFragment : BaseFragment() {
 
     override fun createFragmentView(
         inflater: LayoutInflater,
@@ -22,14 +23,13 @@ class SignUpFragment : BaseFragment() {
     ): View {
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sign_up, parent, false)
+        return inflater.inflate(R.layout.fragment_otp, parent, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.sign_up.setOnClickListener {
-            navController.navigate(R.id.action_signUpFragment_to_otpFragment)
+        view.verify_otp.setOnClickListener {
         }
     }
 
