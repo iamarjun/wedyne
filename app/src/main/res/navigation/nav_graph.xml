@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_loginFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_loginBottomSheet"
+            app:destination="@id/loginBottomSheet" />
     </fragment>
 
     <fragment
@@ -28,5 +31,13 @@
         android:id="@+id/otpFragment"
         android:name="in.wedyne.app.login.OtpFragment"
         android:label="OtpFragment" />
+    <dialog
+        android:id="@+id/loginBottomSheet"
+        android:name="in.wedyne.app.login.LoginBottomSheet"
+        android:label="LoginBottomSheet" >
+        <action
+            android:id="@+id/action_loginBottomSheet_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </dialog>
 
 </navigation>

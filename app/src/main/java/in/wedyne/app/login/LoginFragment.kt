@@ -35,7 +35,7 @@ class LoginFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.login.setOnClickListener {
-//            navController.navigate(R.id.action_loginFragment_to_signUpFragment)
+            navController.navigate(R.id.action_loginFragment_to_loginBottomSheet)
             showLoginBottomSheet()
         }
 
