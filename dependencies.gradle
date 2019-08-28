@@ -1,0 +1,23 @@
+ext.versions = [
+    minSdk            : 21,
+    compileSdk        : 29,
+    buildTools        : '29.0.0',
+    publishVersion    : '1.0.0',
+    publishVersionCode: 1,
+
+    gradlePlugin      : '3.4.2',
+    spotlessPlugin    : '3.23.1',
+
+    versionPlugin     : '0.21.0',
+    bintrayPlugin     : '0.9.1',
+
+    kotlin            : '1.3.41',
+    androidx          : '1.0.2',
+    androidxAnnotation: '1.1.0',
+    constraintLayout  : '1.1.3',
+    epoxy             : '3.7.0',
+    glide             : '4.9.0',
+    multiDex          : '2.0.1',
+    materialDesign    : '1.1.0-alpha08',
+    navigation        : '2.1.0-beta02'
+]

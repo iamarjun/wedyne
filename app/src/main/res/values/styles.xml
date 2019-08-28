@@ -1,16 +1,40 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:windowTranslucentStatus">true</item>
+
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-    
+
+        <item name="textInputStyle">@style/AppTextField</item>
+        <item name="bottomSheetDialogTheme">@style/AppModalBottomSheet</item>
+
     </style>
-    
-    <style name="SplashScreenTheme" parent="Theme.AppCompat.NoActionBar" >
-         <item name="android:windowBackground">@drawable/splashscreen</item>
+
+    <style name="SplashScreenTheme" parent="AppTheme">
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowBackground">@drawable/splashscreen</item>
+    </style>
+
+    <style name="AppTextField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@android:color/white</item>
+    </style>
+
+    <style name="AppModalBottomSheet" parent="ThemeOverlay.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/LoginBottomSheet</item>
+    </style>
+
+    <style name="LoginBottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <!-- Apply attributes here -->
+        <item name="shapeAppearance">@style/ModalShape</item>
+    </style>
+
+    <style name="ModalShape" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
     </style>
 
 </resources>
